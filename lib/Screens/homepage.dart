@@ -1,6 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/Screens/CertificationsSection.dart';
+import 'package:portfolio/Screens/ContactSection.dart';
+import 'package:portfolio/Screens/ExperienceSection.dart';
+import 'package:portfolio/Screens/HeroSection.dart';
+import 'package:portfolio/Screens/ProjectsSection.dart';
+import 'package:portfolio/Screens/aboutsection.dart';
 
 class HomePage extends StatelessWidget {
   final VoidCallback toggleTheme;
@@ -24,10 +30,18 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(child: Column(children: const [
-           
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            HeroSection(),
+            AboutSection(),
+            ExperienceSection(),
+            ProjectsSection(),
+            CertificationsSection(),
+            ContactSection(),
           ],
-        )),
+        ),
+      ),
     );
   }
 }
